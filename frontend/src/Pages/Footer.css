@@ -1,0 +1,19 @@
+ 
+
+ 
+.footer-container{
+    display: flex;
+    gap:2px;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap:wrap;
+    background-color:slategrey;
+}
+.footer-links{
+    text-decoration: none;
+    color:white;
+   
+}
+.footer-heading{
+    color:white;
+}

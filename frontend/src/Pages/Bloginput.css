@@ -1,0 +1,12 @@
+ .bloginput-container{
+    height:500px;
+    width:500px;
+    background-color: whitesmoke;
+    border:2px transparent;
+    border-radius: 10px;
+ }
+ 
+ .bloginput-text{
+    font-size: large;
+    background-color: whitesmoke;
+ }

@@ -1,0 +1,20 @@
+ 
+.heading-main{
+    margin-top: 00px;
+    color:blueviolet;
+    margin-left: 530px;
+
+
+}
+.cards-container{
+    display: flex;
+     gap:20px;
+     flex-wrap:wrap;
+     color:white;
+      
+  
+ 
+ 
+ 
+
+}

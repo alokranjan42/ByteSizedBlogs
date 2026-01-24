@@ -1,0 +1,36 @@
+.nav{
+     display:flex;
+     gap:30px;
+     margin-left: 530px;
+     padding-top:5px;
+     padding-left: -2px;
+    
+ 
+
+}
+.links{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+     
+}
+
+ .buttons {
+ 
+ 
+  display: flex;
+  margin-left: 530px;
+  gap: 10px;
+ 
+}
+
+.button-links {
+  text-decoration: none;
+  border: 1px  transparent; 
+  background-color:blue;
+  border-radius: 2px;
+  padding: 3px 8px;  
+  color:  white; 
+  height:25px;      
+}
+

@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/alokranjan/Desktop/projects/Blog/frontend/output/alok'
+relocations:     []
+...
