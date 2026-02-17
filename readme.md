@@ -1,6 +1,5 @@
 # ✍️ ByteSizedBlogs Backend (MERN)
-
-> ⚠️ This project is under active development.
+ 
 > Features and implementation details may evolve over time.
 
 ---
