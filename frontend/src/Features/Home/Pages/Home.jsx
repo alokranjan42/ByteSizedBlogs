@@ -1,11 +1,11 @@
- import Navbar from "../Components/Navbar/Navbar";
+ 
 import { useEffect, useState } from "react";
 import axios from "axios";  
-import "./Home.css";
-import Card from "./Card.jsx";
+ 
+import Card from  '../Components/Cards.jsx'
 
 export default function Home() {
-  const [blogs, setBlogs] = useState([]); //  
+  const [blogs, setBlogs] = useState([]);  
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <div className="container">
-      <h1 className="heading-main">ByteSizeBlogs</h1>
+      
       <div className="cards-container">
         {blogs.map((item) => (
           <Card
@@ -29,7 +29,7 @@ export default function Home() {
             id={item._id}
             src={item.imageUrl}
             title={item.title}
-            desc={item.content}
+           
             className="cards"
           />
         ))}

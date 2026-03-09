@@ -16,10 +16,10 @@ function Login() {
       alert("User logged in successfully");
       console.log(res.data);
 
-      //  Save token for Authorization header in BlogForm
+    
    localStorage.setItem("token", res.data.accessToken);
 
-//  Save user details if you need them elsewhere
+ 
    localStorage.setItem("user", JSON.stringify(res.data.user));
 
     } catch (err) {

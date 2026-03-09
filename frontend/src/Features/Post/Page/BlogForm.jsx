@@ -1,6 +1,6 @@
  import { useState } from "react";
 import axios from "axios";
-import './Bloginput.css'
+import './BlogForm.css'
 
 export default function BlogForm() {
   const [title, setTitle] = useState("");

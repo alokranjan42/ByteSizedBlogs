@@ -5,18 +5,23 @@ import './Navbar.css'
 function Navbar() {
   return (
     <>
-    <div style={{backgroundColor:"grey", height:"40px"}}>
     <div className="nav">
-    <Link to="/" className="links">Home</Link>
+      <h1 className="heading-main">ByteSizeBlogs</h1>
+
+    <div className="secondary-buttons">
+    <Link to="/Home" className="secondary-button">Home</Link>
     
-    <Link to="/tech" className="links">Tech</Link>
-    <Link to="/ai" className="links">AI</Link>
-    <div className="buttons">
-      <Link to="/create"  className="button-links">Post</Link>
-    <Link to="/signup" className="button-links">Signup</Link> 
-    <Link to="/login" className="button-links">Login</Link> 
+    <Link to="/tech" className="secondary-button">Tech</Link>
+    <Link to="/ai" className="secondary-button">AI</Link>
     </div>
+
+    <div className="primary-buttons">
+  
+    <Link to="/signup" className="button-signin">Sign in</Link> 
+    <Link to="/contactus" className="button-contact">Contact Us</Link> 
+   
     </div>
+    
     </div> 
      
     </>

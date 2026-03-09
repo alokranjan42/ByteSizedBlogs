@@ -1,7 +1,7 @@
 import React from 'react'
-import './Card.css'
+import '../styles/cards.css'
 import {Link} from 'react-router-dom'
-
+ 
 function Card({src,title,desc}) {
   return (
     <>
@@ -12,7 +12,7 @@ function Card({src,title,desc}) {
    <img src={src}  className="img"/>
   
    
-   <p className="para-card">{desc}</p>
+   <p className="card-desc">{desc}</p>
    <Link to={`/{}`}>read more</Link>
    </div>
     
