@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { registerUser } from "../Api/AuthApi";
+import { registerUser } from "../../../Api/AuthApi";
 import './Signup.css'
 
 function Signup() {

@@ -1,0 +1,9 @@
+features-card.{
+    display: flex;
+    flex-wrap:wrap;
+    justify-items: center;
+    gap:10px;
+    height: 300px;
+    background-color: thistle;
+    color:black;
+}
