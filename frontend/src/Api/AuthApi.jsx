@@ -1,11 +1,9 @@
  import axios from "axios";
  
 const API = axios.create({
-  baseURL: "https://bytesizedblogs-backend.onrender.com/api/user", // base URL for user routes
-  withCredentials: true, // optional, only if using cookies/sessions
+  baseURL: "https://bytesizedblogs-backend.onrender.com/api/user", 
+  withCredentials: true,  
 });
-
- 
 export const registerUser = (data) => API.post("/register", data);
 
  

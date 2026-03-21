@@ -6,3 +6,15 @@
     background-color: #f9f9f9;
     margin-top:30px;
 }
+.features-heading{
+    font-size: 30px;
+    color:   #A78BFA ;
+}
+.features-card{
+    display: flex;
+    flex-wrap:wrap;
+    justify-items: center;
+    gap:10px;
+    height: 300px;
+    background-color: thistle;
+}

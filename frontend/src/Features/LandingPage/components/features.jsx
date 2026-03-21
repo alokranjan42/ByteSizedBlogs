@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/features.css'
 import axios from 'axios'
 import {useEffect,useState} from 'react'
+import Cards from './Cards.jsx'
 
 function features() {
 
@@ -25,17 +26,19 @@ function features() {
     <div className="features-container">
       <div> 
         <h1 className="features-heading">Featured  Articles</h1>
-          <div >
-            {state.map((item)=>(
+          <div className="" >
+            
+            {state.length>0?state.map((item)=>(
 
-              <div key={item._id}>
-                <h1>{item.title}</h1>
-                <p>{item.description}</p>
-                <img src={item.image} alt={item.title} />
-                <p>{item.content}</p>
-              </div>
+               
+                <Cards  
+                title={item.title}
+                desc={item.description}
+                img={item.imageUrl} 
 
-            ))}
+                />
+
+            )):(<h1>No featured articles available</h1>)}
 
           </div>
 

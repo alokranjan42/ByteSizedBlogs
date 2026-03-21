@@ -1,6 +1,6 @@
  import React, { useState } from 'react';
-import { loginUser } from '../Api/AuthApi.jsx';
-
+ import {loginUser} from  '../../../Api/AuthApi' 
+ import '../Styles/login.css' 
 function Login() {
   const [form, setForm] = useState({ email: " ", password: " " });
 
@@ -29,9 +29,15 @@ function Login() {
   };
 
   return (
+    <div className="login-page"> 
     <div className="form-container">
-      <h1 className="heading">Login</h1>
+       <h1 className="heading">Login</h1>
+     
+    
       <form onSubmit={handleSubmit} className="form">
+        
+         <br />
+        <label htmlFor="Email"  className="label-email"> Email</label>
         <input
           name="email"
           type="email"
@@ -39,6 +45,8 @@ function Login() {
           onChange={handleChange}
           className="form-input"
         />
+        <br />
+        <label htmlFor="password" className="label-password"> Password</label>
         <input
           name="password"
           type="password"
@@ -49,7 +57,9 @@ function Login() {
         <button type="submit" className="btn">
           Submit
         </button>
+        <p className="form-links">Forgot Password</p>
       </form>
+    </div>
     </div>
   );
 }
