@@ -1,13 +1,18 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link,useNavigate} from 'react-router-dom'
 import './Navbar.css'
 
+
 function Navbar() {
+
+  const navigate=useNavigate();
+  const handleClick=()=>{
+    navigate('/');
+  }
   return (
     <>
     <div className="nav">
-      <h1 className="heading-main">ByteSizeBlogs</h1>
-
+      <h1 className="heading-main" onClick={handleClick}>ByteSizeBlogs</h1>
     <div className="secondary-buttons">
     <Link to="/Home" className="secondary-button">Home</Link>
     
@@ -16,9 +21,8 @@ function Navbar() {
     </div>
 
     <div className="primary-buttons">
-  
-    <Link to="/signup" className="button-signin">Sign in</Link> 
-    <Link to="/contactus" className="button-contact">Contact Us</Link> 
+    <Link to="/login" className="button-signin">Sign in</Link> 
+    <Link to="/contact" className="button-contact">Contact Us</Link> 
    
     </div>
     

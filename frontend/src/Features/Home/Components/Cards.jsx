@@ -1,22 +1,34 @@
 import React from 'react'
 import '../styles/cards.css'
-import {Link} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
+
  
-function Card({src,title,desc}) {
+function Card({src,title,content,id}) {
+  const navigate=useNavigate();
+  const handleClick=()=>{
+    navigate(`/blog/${id}`);
+  }
+
+  const limitWords = (text, limit = 20) =>
+  text.split(" ").slice(0, limit).join(" ") + "...";
+  const limitDescription=(text,limit=35)=>
+    text.split(" ").slice(0,limit).join(" ")+ "...";
   return (
     <>
-    
-  <div className="cards">
-   
-  <h3  className="card-heading">{title}</h3>
+
+    <div class="container">
+  <div class="card"> 
+   <h3  className="card-heading">{limitWords(title)}</h3>
    <img src={src}  className="img"/>
-  
+   <p className="card-desc">{limitDescription(content)}</p>
+  </div>
    
-   <p className="card-desc">{desc}</p>
-   <Link to={`/{}`}>read more</Link>
+</div>
+  <div className="cards-container"> 
+    <div className="cards">
+  
    </div>
-    
- 
+   </div> 
    </>
   )
 }

@@ -93,6 +93,12 @@ const deleteBlog = AsyncHandler(async (req, res) => {
     message: "Blog deleted successfully",
   });
 });
+const countTotalBlog=AsyncHandler(async(req,res)=>{
+   const total=await Blog.countDocuments();
+  return res
+  .status(200)
+  .json(new ApiResponse (200,"total blogs",total))
+})
 
 export {
   createBlog,

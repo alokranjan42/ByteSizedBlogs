@@ -1,8 +1,11 @@
  import React, { useState } from 'react';
  import {loginUser} from  '../../../Api/AuthApi' 
  import '../Styles/login.css' 
+ import {useNavigate} from 'react-router-dom'
 function Login() {
+
   const [form, setForm] = useState({ email: " ", password: " " });
+  const naviagte=useNavigate();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -21,6 +24,7 @@ function Login() {
 
  
    localStorage.setItem("user", JSON.stringify(res.data.user));
+   naviagte("/");
 
     } catch (err) {
       alert(err.response?.data?.message || "Login failed");

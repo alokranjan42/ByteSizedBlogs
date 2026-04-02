@@ -5,7 +5,7 @@ function Cards({id,src,title,desc,img}) {
   return (
     <div className="features-card">
         <div>
-           <h3>{title}</h3>
+          <h3>{title}</h3>
          <img src= {img} alt="image" />
          <p>{desc}</p>
          <h4>hekko</h4>

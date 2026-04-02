@@ -47,26 +47,25 @@ export default function BlogForm() {
   };
 
   return (
-    <div style={{ maxWidth: "500px", margin: "20px auto" }} className="bloginput-container">
-      <h2 className="bloginput-heading">Create a Blog</h2>
+    <div  className="form-container">
+      <h2 className="form-heading">Create a Blog</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Blog Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          style={{ display: "block", width: "100%", marginBottom: "10px" }}
           required
-          className="bloginput-input"
+          className="form-input"
         />
 
         <textarea
           placeholder="Blog Content"
           value={content}
           onChange={(e) => setContent(e.target.value)}
-          style={{ display: "block", width: "100%", height: "100px", marginBottom: "10px" }}
+          
           required
-          className="bloginput-text"
+          className="form-text"
         />
 
         <input
@@ -74,11 +73,10 @@ export default function BlogForm() {
           placeholder="Image URL"
           value={imageUrl}
           onChange={(e) => setImageUrl(e.target.value)}
-          style={{ display: "block", width: "100%", marginBottom: "10px" }}
-          className="bloginput-text"
+          className="form-text"
         />
 
-        <button type="submit" className="bloginput-button">Post Blog</button>
+        <button type="submit" className="form-button">Post Blog</button>
       </form>
 
       {message && <p>{message}</p>}

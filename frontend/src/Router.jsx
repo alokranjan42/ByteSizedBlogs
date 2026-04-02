@@ -4,6 +4,8 @@ import LandingPage from './Features/LandingPage/pages/LandingPage'
 import Layout from './Components/Layout/Layout.jsx'
 import Home from './Features/Home/pages/Home.jsx'
 import Login from './Features/Auth/components/Login.jsx'
+import Signup from  './Features/Auth/components/Signup.jsx'
+import Contact from './Components/Contact/Contact.jsx'
 import Tech from './Features/Tech/Pages/Tech.jsx'
 import Ai from './Features/Ai/Pages/Ai.jsx'
  
@@ -31,6 +33,13 @@ import Ai from './Features/Ai/Pages/Ai.jsx'
       {
         path:'/ai',
         element:<Ai/>
+      },{
+        path:"/signup",
+        element:<Signup/>
+      },
+      {
+        path:"/contact",
+        element:<Contact/>
       }
        
     ]
