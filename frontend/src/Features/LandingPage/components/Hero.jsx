@@ -1,8 +1,16 @@
  import React from 'react'
  import Aiimg3 from '../../../assets/aiimg3.jpeg'
  import   '../styles/Hero.css'
+ import {useNavigate} from 'react-router-dom'
  
 function Hero() {
+
+  const navigate=useNavigate();
+
+  const handleNavigate=()=>{
+    navigate('/home');
+    
+  }
   return (
     <div className="container">
       <div className="hero-text">
@@ -16,9 +24,9 @@ function Hero() {
           
         </h1>
 
-          <p className="hero-description">Discover and share knowledge with our community of learners and educators.</p>
+        <p className="hero-description">Discover and share knowledge with our community of learners and educators.</p>
         <div className="hero-Actionbuttons" >
-        <button className="hero-Actionbutton1"> Start Reading </button>
+        <button className="hero-Actionbutton1" onClick={ handleNavigate}> Start Reading </button>
         <button className="hero-Actionbutton2"> Explore Ai </button>
         </div>
       

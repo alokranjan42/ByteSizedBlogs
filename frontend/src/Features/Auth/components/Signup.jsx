@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { registerUser } from "../../../Api/AuthApi";
-import './Signup.css'
+import '../Styles/Signup.css'
 
 function Signup() {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
@@ -53,6 +53,8 @@ function Signup() {
         />
        <br/>
         <button type="submit" className="btn">Submit</button>
+        <p className="form-links">Already Registered </p>
+        <span><p>Login</p></span>
       </form>
     </div>
   );
