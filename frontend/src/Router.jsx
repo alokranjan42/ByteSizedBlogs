@@ -1,6 +1,6 @@
 import React from 'react'
 import { createBrowserRouter,BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import LandingPage from './Features/LandingPage/pages/LandingPage'
+import LandingPage from './Features/LandingPage/Pages/LandingPage'
 import Layout from './Components/Layout/Layout.jsx'
 import Home from './Features/Home/Pages/Home.jsx'
 import Login from './Features/Auth/components/Login.jsx'
