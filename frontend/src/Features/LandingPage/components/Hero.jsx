@@ -1,5 +1,5 @@
  import React from 'react'
- import Aiimg3 from '../../../assets/aiimg3.jpeg'
+ import Aiimg3 from '../../../assets/Aiimg3.jpeg'
  import   '../styles/Hero.css'
  import {useNavigate} from 'react-router-dom'
  

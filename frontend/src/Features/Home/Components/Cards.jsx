@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/cards.css'
+import '../Styles/cards.css'
 import {useNavigate} from 'react-router-dom'
 
  
