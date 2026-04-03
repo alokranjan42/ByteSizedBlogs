@@ -45,7 +45,7 @@ import Ai from './Features/Ai/Pages/Ai.jsx'
     ]
   }
 
- ])
+ ], )
       
       
 
