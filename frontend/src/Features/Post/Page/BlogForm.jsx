@@ -1,5 +1,5 @@
  import { useState } from "react";
-import axios from "axios";
+import API from "../../../Api/Axios.jsx";
 import './BlogForm.css'
 
 export default function BlogForm() {
@@ -18,8 +18,8 @@ export default function BlogForm() {
         return;
       }
 
-      const res = await axios.post(
-        "http://localhost:5003/api/user/blogs",
+      const res = await API.post(
+        "/blogs",
         { title, content, imageUrl },
         {
           headers: {

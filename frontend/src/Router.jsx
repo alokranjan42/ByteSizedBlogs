@@ -8,6 +8,8 @@ import Signup from  './Features/Auth/components/Signup.jsx'
 import Contact from './Components/Contact/Contact.jsx'
 import Tech from './Features/Tech/Pages/Tech.jsx'
 import Ai from './Features/Ai/Pages/Ai.jsx'
+
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
  
  const router=createBrowserRouter([
   {
@@ -45,7 +47,9 @@ import Ai from './Features/Ai/Pages/Ai.jsx'
     ]
   }
 
- ], )
+ ], {
+  basename: basename === '/' ? undefined : basename,
+ })
       
       
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import '../styles/features.css'
-import axios from 'axios'
 import {useEffect,useState} from 'react'
 import Cards from './Cards.jsx'
+import API from '../../../Api/Axios.jsx'
 
 function features() {
 
@@ -10,8 +10,8 @@ function features() {
  useEffect(()=>{
   const fetchFeatures=async()=>{
     try{
-      const res=await axios.get('http://localhost:5000/api/featured-articles');
-       setState(res.data);
+      const res = await API.get('/blogs');
+      setState(res.data?.data?.slice(0, 3) ?? []);
 
 
     }catch(error){
@@ -33,7 +33,7 @@ function features() {
                
                 <Cards  
                 title={item.title}
-                desc={item.description}
+                desc={item.content}
                 img={item.imageUrl} 
 
                 />
