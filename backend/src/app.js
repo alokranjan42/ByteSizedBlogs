@@ -6,10 +6,30 @@ import blogRoutes from "./routes/blog.routes.js";
 import commenRoutes from './routes/comment.routes.js'
 const app = express();
 
- app.use(cors({
-  origin: ['http://localhost:5173', 'https://alokranjan07.github.io'], // allow both local & GH Pages
-  credentials: true
-}));
+const allowedOrigins = new Set([
+  "http://localhost:5173",
+  "https://alokranjan42.github.io",
+]);
+
+app.use(
+  cors({
+    origin(origin, callback) {
+      if (!origin) {
+        callback(null, true);
+        return;
+      }
+
+      const isVercelPreview = /^https:\/\/.*\.vercel\.app$/.test(origin);
+      if (allowedOrigins.has(origin) || isVercelPreview) {
+        callback(null, true);
+        return;
+      }
+
+      callback(new Error(`Not allowed by CORS: ${origin}`));
+    },
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(cookieParser());
