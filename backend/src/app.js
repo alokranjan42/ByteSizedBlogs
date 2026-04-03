@@ -21,7 +21,7 @@ app.use(
 
       const isVercelPreview = /^https:\/\/.*\.vercel\.app$/.test(origin);
       if (allowedOrigins.has(origin) || isVercelPreview) {
-        callback(null, true);
+        callback(null, origin);
         return;
       }
 
