@@ -106,4 +106,5 @@ export {
   getblogbySlug,
   updateBlog,
   deleteBlog,
+  countTotalBlog
 };
