@@ -2,6 +2,7 @@ import { ApiError } from "../utils/Apierror.js";
 import {ApiResponse} from '../utils/Apiresponse.js'
 import  AsyncHandler from '../utils/Asynchandler.js'
 import {Comment} from '../models/comment.models.js'
+ 
 
 
 const addComment=AsyncHandler(async(req,res)=>{
@@ -9,8 +10,11 @@ const addComment=AsyncHandler(async(req,res)=>{
 
     if(!blogId||!content){
         throw new ApiError(404,"blog not found");
-    }
+    } 
 
+    if(!req.user){
+        throw new ApiError(401,"login required");
+    }
     const comment=await Comment.create({
         blog:blogId,
         author:req.user._id,
@@ -32,6 +36,9 @@ const getAllComment=AsyncHandler(async(req,res)=>{
 
 
 });
+const updateComment=AsyncHandler(async(req,res)=>{
+    const comment=await findById()
+})
 
 const deleteComment=AsyncHandler(async(req,res)=>{
     
